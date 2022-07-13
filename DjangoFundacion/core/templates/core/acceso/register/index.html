@@ -16,7 +16,7 @@
     <!-- NAVBAR -->
     {% load static %}
     <nav class="navbar navbar-expand-lg bg-info text-white">
-     <img src="{%static 'core/images/Logotipo_degradado_estudio_varios_colores.png' %}" alt="">
+      <img class="navbar-brand" src="{%static 'core/images/logo_superior.jpeg' %}" alt="">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -35,11 +35,6 @@
             <a class="text-white nav-link" href="#">Contacto</a>
           </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="buscar por artista/tipo arte/concepto" aria-label="Search">
-        <button type="button" class="btn btn-light mr-5  my-2 my-sm-0">Buscar</button>
-
-        </form>
         <a target= "_blank" href="../login/"type="button" class="btn btn-light mr-1 ml-5">Ingresar</button></a>
         <a href="index.html"><button type="button" class="btn btn-light mr-5 ml-1">Registrarse</button></a>
       </div>
@@ -61,12 +56,20 @@
                 <div class="form-group">
                     <input name="email" type="email" class="form-control" placeholder="Ingresa tu email *" value="" id="userEmail"/>
                 </div>
-
                 <div class="form-group">
                     <input name="contraseña" type="password" class="form-control" placeholder="Ingresa tu contraseña *" value="" id="userPassword"/>
-                    <p class="mt-1 text-center text-secondary small">Los campos con * son obligatorios</p>
+                    
                 </div>
-
+                
+                <div class="dropdown">
+                  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Persona...
+                  <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Familiar</a></li>
+                    <li><a href="#">Donante</a></li>
+                  </ul>
+                  <p class="mt-1 text-center text-secondary small">Los campos con * son obligatorios</p>
+                </div>
                 <div class="form-group">
                   <!-- <button type="submit" class="btn btnSubmit" value="Enviar">Registrarse</button> -->
                   <input type="submit" class="btn btn-primary mr-5 ml-5 mt-3" id="enviar" value="Registrarse">
